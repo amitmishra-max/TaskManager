@@ -1,5 +1,5 @@
 .filter-bar {
-  background: #fff;
+  background: var(--surface);
   border-radius: 12px;
   padding: 1rem;
   border: 1px solid var(--border);
@@ -18,12 +18,13 @@
 .search-input {
   width: 100%;
   padding: 0.85rem 2.5rem 0.85rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border);
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: inherit;
-  background: white;
+  background: var(--surface);
+  color: var(--text-color);
 }
 
 .search-input:hover {

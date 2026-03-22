@@ -1,15 +1,32 @@
 # TaskManager (React + Vite)
 
-A simple React task manager app built with Vite.
+A polished React task manager app built with Vite.
 
 ## 🚀 Overview
 
-- React + Vite starter project
-- task list CRUD (add, edit, toggle complete, delete, filter)
-- due dates and category tags for each task
-- local storage persistence via `src/hooks/useLocalStorage.js`
-- components in `src/components`: `Dashboard`, `FilterBar`, `TaskForm`, `TaskList`, `TaskItem`
-- custom hook in `src/hooks/useTaskManager.js`
+This project is a fully-featured smart task manager that includes:
+
+- Add new tasks (Title, Priority, Category, optional Due Date)
+- Edit task title/priority/category/due date inline
+- Toggle completion status (Pending / Completed)
+- Delete tasks one-by-one
+- Bulk clear completed tasks
+- Search tasks by title
+- Filter tasks by status (All / Pending / Completed)
+- Filter tasks by category (All / Work / Personal / Shopping / Health / Other)
+- Dashboard stats (total, completed, pending, high priority, completion rate)
+- Dark mode / Light mode toggle with localStorage persistence
+- Task persistence in localStorage via custom hook (`useLocalStorage`)
+
+## 🧩 Features
+
+- `src/hooks/useTaskManager.js` - all task CRUD and filter logic
+- `src/components/TaskForm.jsx` - add task form
+- `src/components/TaskList.jsx` + `TaskItem.jsx` - task display + edits
+- `src/components/FilterBar.jsx` - search + status + category + clear button
+- `src/components/Dashboard.jsx` - quick summary cards & progress bar
+- `src/components/ThemeToggle.jsx` - light/dark theme switch
+- `src/hooks/useTheme.js` - theme state + localStorage and root CSS attribute update
 
 ## 🛠️ Prerequisites
 
@@ -18,13 +35,13 @@ A simple React task manager app built with Vite.
 
 ## 📦 Setup
 
-1. Open terminal in project folder
+1. Navigate into the project folder.
 2. Install dependencies:
 
 ```bash
 npm install
 # or
-# yarn
+# yarn install
 ```
 
 ## ▶️ Run locally
@@ -35,7 +52,7 @@ npm run dev
 # yarn dev
 ```
 
-Open `http://localhost:5173` (or address shown in terminal).
+Open the URL shown in terminal (default `http://localhost:5173`).
 
 ## 🧪 Build for production
 
@@ -55,14 +72,25 @@ npm run lint
 
 ## 📁 Project structure
 
-- `src/main.jsx` — app bootstrap
-- `src/App.jsx` — top-level layout
-- `src/components` — UI components for tasks and filters
+- `src/main.jsx` — App entry point
+- `src/App.jsx` — layout with dashboard, filters, form, list + theme hook
+- `src/App.css` — root theme design and layout
+- `src/components` — modular UI components
 - `src/hooks/useLocalStorage.js` — local storage helper
-- `src/hooks/useTaskManager.js` — task state and actions
+- `src/hooks/useTaskManager.js` — task state management
+- `src/hooks/useTheme.js` — theme toggle logic
 
-## ❤️ Notes
+## 💡 Notes
 
-Tasks are persisted in `localStorage`, so browser refresh does not lose data.
+- Theme is stored in localStorage as `theme`, so preference persists between refreshes.
+- Tasks are stored under `tasks` in localStorage.
+- Edit and filter state are fully reactive with React hooks.
 
-Feel free to extend with features like edit task, due dates, and categories.
+## 🛠️ Extend
+
+Ideas to keep building:
+- due-date reminders and overdue highlighting
+- task priority sorting and custom order drag-and-drop
+- user authentication and multi-user data
+- API-backed persistence with Node/Express + database
+

@@ -1,12 +1,15 @@
 import { useMemo } from 'react';
 import useTaskManager from './hooks/useTaskManager';
+import useTheme from './hooks/useTheme';
 import Dashboard from './components/Dashboard';
 import TaskForm from './components/TaskForm';
 import FilterBar from './components/FilterBar';
 import TaskList from './components/TaskList';
+import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
   const {
     addTask,
     deleteTask,
@@ -37,6 +40,7 @@ function App() {
             Master your productivity with organized task management
           </p>
         </div>
+        <ThemeToggle theme={theme} onToggle={toggleTheme} />
       </header>
 
       <main className="app-main">

@@ -3,7 +3,7 @@
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border);
   transition: background-color 0.2s;
   animation: slideIn 0.3s ease-out;
 }
@@ -119,7 +119,7 @@
   opacity: 1;
 }
 
-.btn-save { color: #059669; }
+.btn-save { color: var(--accent-color); }
 .btn-cancel { color: #ef4444; }
 
 .task-badge.due { background: rgba(59, 130, 246, 0.1); color: #0369a1; }

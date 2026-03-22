@@ -1,15 +1,15 @@
 .dashboard {
-  background: #fff;
+  background: var(--surface);
   border-radius: 12px;
   padding: 1.4rem;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
 }
 
 .dashboard-header {
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border);
 }
 
 .dashboard-header h2 {
@@ -42,10 +42,31 @@
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
+[data-theme="dark"] .stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .stat-card.success {
+  background: rgba(34, 197, 94, 0.2);
+}
+
+[data-theme="dark"] .stat-card.warning {
+  background: rgba(234, 179, 8, 0.2);
+}
+
+[data-theme="dark"] .stat-card.danger {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="dark"] .stat-card.progress {
+  background: rgba(59, 130, 246, 0.2);
+}
+
 .stat-card.success {
   background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
 }
-
 .stat-card.warning {
   background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
 }
@@ -70,13 +91,13 @@
 .stat-value {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--dark-text);
+  color: var(--text-color);
   line-height: 1;
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: var(--light-text);
+  color: var(--muted-color);
   margin-top: 0.25rem;
 }
 
@@ -92,7 +113,7 @@
 }
 
 .progress-bar {
-  background: var(--border-color);
+  background: var(--border);
   border-radius: 12px;
   height: 24px;
   overflow: hidden;

@@ -1,9 +1,9 @@
 .task-form {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
 }
 
 .form-content {
@@ -22,12 +22,13 @@
 .task-input {
   width: 100%;
   padding: 1rem 1.25rem;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border);
   border-radius: 10px;
   font-size: 1.05rem;
   transition: all 0.3s ease;
   font-family: inherit;
-  background: white;
+  background: var(--surface);
+  color: var(--text-color);
 }
 
 .task-input:focus {
@@ -61,10 +62,11 @@
 
 .form-select {
   padding: 0.875rem 1rem;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border);
   border-radius: 10px;
   font-size: 0.95rem;
-  background: white;
+  background: var(--surface);
+  color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: inherit;
