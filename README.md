@@ -1,4 +1,4 @@
-# firstapp (React + Vite)
+# TaskManger (React + Vite)
 
 A simple React task manager app built with Vite.
 
